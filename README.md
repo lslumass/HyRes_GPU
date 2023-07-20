@@ -1,2 +1,2 @@
 # tutorial
-this is a collection of different tutorials in simulation of biophysics. each folder for each tutorial
+this is a collection of different tutorials on the simulation of biophysics. For each tutorial, each folder includes related files and a jupyter-lab note.
