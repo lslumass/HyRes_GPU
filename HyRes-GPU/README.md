@@ -9,7 +9,10 @@
    a. coordinate of protein: PDB file  
    b. topology of protein: PSF file  
    c. HyRes-GPU top file: top-hyres-gpu.inp  
-   d. HyRes-GPU parameter file: param-hyres-gpu.inp  
+   d. HyRes-GPU parameter file: param-hyres-gpu.inp   
+
+   HyRes-style PDB and PSF files can be created from sequence or atomistic model,
+   Yumeng Zhang
 
 ## 3. Running script
    a. run.nvt.py is for the NVT simulation  
