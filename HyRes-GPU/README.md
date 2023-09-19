@@ -12,7 +12,7 @@
    d. HyRes-GPU parameter file: param-hyres-gpu.inp   
 
    HyRes-style PDB and PSF files can be created from sequence or atomistic model,
-   Yumeng Zhang
+   Yumeng Zhang qwq
 
 ## 3. Running script
    a. run.nvt.py is for the NVT simulation  
