@@ -15,7 +15,7 @@
    a. run.nvt.py is for the NVT simulation  
    b. run.npt.py is for the NPT simulation  
    
-   **Usage**: python run.*.py pdb_file psf_file GPU_id  
+   **Usage**: python run.*.py pdb_file psf_file GPU_id   
               where GPU_id is the index of GPU device, such as 0, 1, 2  
    **Note**: The running script is based on Python 3 and numpy is needed.  
    
