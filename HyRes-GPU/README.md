@@ -5,7 +5,7 @@
    http://docs.openmm.org/latest/userguide/application/01_getting_started.html#installing-openmm
    
 ## 2. Preparation
-   This simulation would start from CHARMM-based input files and force-filed files, which are as follows: 
+   This simulation would start from CHARMM-based input files and force-filed files, which are as follows:  
    a. coordinate of protein: PDB file
    b. topology of protein: PSF file
    c. HyRes-GPU top file: top-hyres-gpu.inp
