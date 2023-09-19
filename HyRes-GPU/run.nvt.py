@@ -9,8 +9,8 @@ import numpy as np
 pdb_file = argv[1]
 psf_file = argv[2]
 gpu_id = argv[3]
-top_inp = 'top-hyres2.inp'
-param_inp = 'param-hyres2-llps.inp'
+top_inp = 'top-hyres-gpu.inp'
+param_inp = 'param-hyres-gpu.inp'
 
 dt = 0.004*unit.picoseconds		                                # time step
 total_step = 500000000                                             # total step
