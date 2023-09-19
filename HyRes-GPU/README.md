@@ -7,11 +7,12 @@ This is a tutorial for running Hyres-GPU simulation using OpenMM
 2. Preparation
    This simulation would start from CHARMM-based input files and force-filed files, which are as follows:
    a. coordinate of protein: PDB file
+   
    b. topology of protein: PSF file
    c. HyRes-GPU top file: top-hyres-gpu.inp
    d. HyRes-GPU parameter file: param-hyres-gpu.inp
 
-3. Running script
+4. Running script
    a. run.nvt.py is for the NVT simulation
    b. run.npt.py is for the NPT simulation
    
