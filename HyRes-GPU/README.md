@@ -11,7 +11,7 @@
    c. HyRes-GPU top file: top-hyres-gpu.inp  
    d. HyRes-GPU parameter file: param-hyres-gpu.inp   
 
-   HyRes-style PDB and PSF files can be created from sequence or atomistic model,
+   HyRes-style PDB and PSF files can be created from [atomistic model](https://github.com/wayuer19/tutorial/tree/main/at2hyres)
   
 
 ## 3. Running script
