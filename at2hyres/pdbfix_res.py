@@ -1,10 +1,13 @@
-import sys
+import sys, os
 
 # fix the resid for different chain in PDB file
 
 pdb_file = sys.argv[1]  
 out_file = sys.argv[2]
 capping = sys.argv[3]
+
+## add chain id
+
 
 ## read all atoms
 with open(pdb_file, "r") as pdb:
@@ -13,7 +16,8 @@ with open(pdb_file, "r") as pdb:
 atoms = []
 for line in lines:
     if line.startswith("ATOM"):
-        atoms.append(line)
+        new = line[:21] + 'X' + line[22:-1]
+        atoms.append(new)
 
 if capping == '1':
     ## get the length of each chain
