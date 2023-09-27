@@ -6,9 +6,6 @@ pdb_file = sys.argv[1]
 out_file = sys.argv[2]
 capping = sys.argv[3]
 
-## add chain id
-
-
 ## read all atoms
 with open(pdb_file, "r") as pdb:
     lines = pdb.readlines()
@@ -16,23 +13,35 @@ with open(pdb_file, "r") as pdb:
 atoms = []
 for line in lines:
     if line.startswith("ATOM"):
-        new = line[:21] + 'X' + line[22:-1]
+        new = line[:21] + 'X' + line[22:]
         atoms.append(new)
 
 if capping == '1':
-    ## get the length of each chain
+    ## get the length of each chain and number of residue of each chain
     segname = atoms[0].split()[-1]
     chains = []
+    ress = []
     count = 0
+    resnum = 1
+    resid = int(atoms[0][22:26])
     for atom in atoms:
+        print(int(atom[22:26]), resid)
         if atom.split()[-1] == segname:
             count += 1
+            if int(atom[22:26]) != resid:
+                resnum += 1
+                resid = int(atom[22:26])
         else:
             chains.append(count)
+            ress.append(resnum)
             segname = atom.split()[-1]
             count = 1
+            resnum = 1
+            resid = int(atom[22:26])
     chains.append(count)
-    print(chains)
+    ress.append(resnum)
+    print(chains, ress)
+
     ## re-number the resid of N-T/C-T
     count = 0
     for i in range(len(chains)):
@@ -44,29 +53,29 @@ if capping == '1':
             elif j >= ct_start:
                 atoms[j] = atoms[j][:17] + 'CBX' + atoms[j][20:22] + '   2' + atoms[j][26:]
             else:
-                atoms[j] = atoms[j][:22] + str(int(atoms[j].split()[5]) + 2).rjust(4) + atoms[j][26:] 
+                atoms[j] = atoms[j][:22] + str(int(atoms[j][22:26]) + 2).rjust(4) + atoms[j][26:] 
         count += chains[i]
 else:
     print('no cap')
 
 n_res = 1
-resid = atoms[0].split()[5]
+resid = int(atoms[0][22:26])
 segid = atoms[0].split()[-1]
 new = []
 for atom in atoms:
     if atom.split()[-1] == segid:
-        if atom.split()[5] != resid:
-            resid = atom.split()[5]
+        if int(atom[22:26]) != resid:
+            resid = int(atom[22:26])
             n_res += 1
             l = atom[:22] + str(n_res).rjust(4) + atom[26:54] + str(1.00).rjust(6) + str(0.00).rjust(6) + atom[66:-1]
         else:
             l = atom[:22] + str(n_res).rjust(4) + atom[26:54] + str(1.00).rjust(6) + str(0.00).rjust(6) + atom[66:-1]
     else:
         segid = atom.split()[-1]
-        resid = atom.split()[5]
+        resid = int(atom[22:26])
         n_res = 1
-        if atom.split()[5] != resid:
-            resid = atom.split()[5]
+        if int(atom[22:26]) != resid:
+            resid = int(atom[22:26])
             n_res += 1
             l = atom[:22] + str(n_res).rjust(4) + atom[26:54] + str(1.00).rjust(6) + str(0.00).rjust(6) + atom[66:-1]
         else:
