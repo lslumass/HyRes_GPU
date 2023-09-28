@@ -32,7 +32,6 @@ if capping == '1':
     resnum = 1
     resid = int(atoms[0][22:26])
     for atom in atoms:
-        print(int(atom[22:26]), resid)
         if atom.split()[-1] == segname:
             count += 1
             if int(atom[22:26]) != resid:
