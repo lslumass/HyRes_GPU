@@ -6,6 +6,8 @@ import sys, os
 ## 3) rename the ACE and CT3 terminus as AMN and CBX
 ## 4) set Occupancy (55-60) as 1.00 and set Temperature factor (61-66) as 0.00
 
+## Author: Shanlong Li @ UMass
+
 pdb_file = sys.argv[1]  
 out_file = sys.argv[2]
 capping = sys.argv[3]

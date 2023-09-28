@@ -2,6 +2,9 @@
 
 import sys
 
+## this script is used to convert atomistic model to HyRes model
+## Athour: Xiaoyong Liu, Modified by Shanlong Li
+
 if len(sys.argv) != 3:
    print("Usage: at2cg.py inp.pdb out.pdb")
    print("       in the inp.pdb, it's atomistic structure")

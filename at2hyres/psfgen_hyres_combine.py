@@ -5,6 +5,8 @@ from psfgen import PsfGen
 ## this script is used to combined different protein and ten generate the psf file
 ## the max num of protein is 10
 
+## Author: Shanlong Li @ UMass
+
 out = sys.argv[1]
 
 gen = PsfGen()
