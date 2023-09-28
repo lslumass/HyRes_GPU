@@ -1,6 +1,10 @@
 import sys, os
 
-# fix the resid for different chain in PDB file
+## this script is used to fix the unstandard PDB file including:
+## 1) change the chain name to 'X', regardless of original ones
+## 2) re-order the resid from 1 for each segment
+## 3) rename the ACE and CT3 terminus as AMN and CBX
+## 4) set Occupancy (55-60) as 1.00 and set Temperature factor (61-66) as 0.00
 
 pdb_file = sys.argv[1]  
 out_file = sys.argv[2]
@@ -10,6 +14,7 @@ capping = sys.argv[3]
 with open(pdb_file, "r") as pdb:
     lines = pdb.readlines()
 
+## rename the chain name
 atoms = []
 for line in lines:
     if line.startswith("ATOM"):
