@@ -1,2 +1,4 @@
-# tutorial
-this is a collection of different tutorials on the simulation of biophysics. For each tutorial, each folder includes related files and a jupyter-lab note.
+# HyRes_GPU model tutorial
+
+## Shortly
+HyRes model is a new-developped **Hy**brid **Res**olution coarge-grained protein model since 2017, where the backbone is atomistic description but coarse-grained side-chains.
