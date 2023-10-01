@@ -7,5 +7,5 @@ HyRes model is a **Hy**brid **Res**olution coarse-grained protein model develope
 3. HyRes-GPU: [https://doi.org/10.1101/2023.08.22.554378](https://doi.org/10.1101/2023.08.22.554378)  
 
 For running a HyRes simulation, two steps are necessary:
-1. convert atomistic model to HyRes model ([at2hyres](https://github.com/wayuer19/HyRes_GPU/tree/main/at2hyres))
+1. convert atomistic model to HyRes model, please follow README.md in [at2hyres](https://github.com/wayuer19/HyRes_GPU/tree/main/at2hyres)
 2. describe HyRes force field in OpenMM and run simulation ([run_OpenMM](https://github.com/wayuer19/HyRes_GPU/tree/main/run_OpenMM))  
