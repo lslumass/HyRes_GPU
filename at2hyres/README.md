@@ -1,5 +1,7 @@
-This is the tutorial for building HyRes model from atomistic model.
+# at2hyres
+In this section, you can convert an atomistic model to HyRes model following the instructions.
 
-Please follow the [step-by-step instructions](https://brass-haircut-0a3.notion.site/atomistic-to-HyRes-2-8f48d7cbd84b4a7891bf76e3a8db9cc8?pvs=4).
-
-For running simulation, just use python run.nvt.py pdb_file psf_file GPU_id
+## Dependencies
+1. python 3.x (< 3.10, test with 3.8.17), conda environment recommended
+2. [CHARMM-GUI](https://www.charmm-gui.org/) (registration needed)
+3. psfgen-python (install through conda install -c conda-forge psfgen, python < 3.10)
