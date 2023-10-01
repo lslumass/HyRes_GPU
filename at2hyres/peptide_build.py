@@ -7,6 +7,7 @@ from PeptideBuilder import Geometry
 import PeptideBuilder
 
 seq_file = sys.argv[1]
+out_file = sys.argv[2]
 
 geo = Geometry.geometry("R")
 #geo.phi = 0
@@ -25,5 +26,5 @@ import Bio.PDB
 
 out = Bio.PDB.PDBIO()
 out.set_structure(structure)
-out.save("tdp-43.pdb")
+out.save(out_file)
 
