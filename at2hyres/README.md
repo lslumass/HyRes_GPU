@@ -11,6 +11,6 @@ In this section, following the instructions, you will see how to convert an atom
 HyRes was developed based CHARMM force field and software, so first a CHARMM-style PDB file is needed. Here CHARMM-GUI is a good choice.
 1. open CHARMM-GUI and sign in.
 2. select Input Generator --> PDB Reader&Manipulator
-3. here, input the PDB id or upload the PDB file, and then NEXT>NEXT>
+3. here, input the PDB id or upload the PDB file, and then NEXT>NEXT>  
    **Note:** for IDPs/IDRs, one can generate the PDB file using the PeptideBuilder package, **peptide_build.py** is a simple example.
 4. 
