@@ -8,10 +8,10 @@ HyRes model is a **Hy**brid **Res**olution coarse-grained protein model develope
 
 For running a HyRes simulation, two steps are necessary:
 1. convert atomistic model to HyRes model, please follow [README.md](https://github.com/wayuer19/HyRes_GPU/blob/main/at2hyres/README.md) in [at2hyres](https://github.com/wayuer19/HyRes_GPU/tree/main/at2hyres) for the step-by-step instructions.  
-    Following the instructions, one can create the PDB and PSF files for HyRes model, which will be used as the input files in OpenMM.  
-2. describe HyRes force field in OpenMM and run the simulation .
-    here, the HyRes force field was fully described through custom forces in OpenMM, which were integrated into the running script. If interested, one can read the script for details.
-   some parameters needed to be regulated according to the simulation details, like box size, time step, ion concentration, and so on   
+    Following the instructions, one can create the PDB and PSF files for HyRes model, which will be used as the input files in OpenMM.   
+2. describe HyRes force field in OpenMM and run the simulation.   
+   Here, the HyRes force field was fully described through custom forces in OpenMM, which were integrated into the running script. If interested, one can read the script for details.   
+   Some parameters needed to be regulated according to the simulation details, like box size, time step, ion concentration, and so on   
 
 After these two steps, HyRes simulation can be run through  
 `python run.nvt.py pdb_file psf_file GPU_id`   
