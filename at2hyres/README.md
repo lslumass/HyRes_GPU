@@ -5,7 +5,7 @@ In this section, following the instructions, you will see how to convert an atom
 1. python 3.x (< 3.10, test with 3.8.17), conda environment recommended
 2. [CHARMM-GUI](https://www.charmm-gui.org/) (registration needed)
 3. psfgen-python (install through conda install -c conda-forge psfgen, python < 3.10)
-4. PeptideBuilder and Biopython (Optional)
+4. [PeptideBuilder](https://github.com/clauswilke/PeptideBuilder) and Biopython (Optional)
 
 ## step 1: prepare the atomistic PDB file  
 HyRes was developed based CHARMM force field and software, so first a CHARMM-style PDB file is needed. Here CHARMM-GUI is a good choice.
