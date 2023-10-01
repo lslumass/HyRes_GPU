@@ -19,4 +19,8 @@ HyRes was developed based CHARMM force field and software, so first a CHARMM-sty
 4. here, one can choose any chains needed and also model missing residues if needed, NEXT>
 5. select ACE and CT3 in the "Terminal group patching" as the two terminus, NEXT>
    **Note:** only ACE/CT3 are supported now in HyRes
-6. Download the PDB file labeled as "CHARMM PDB", (tdp_43_charmm.pdb in examples)
+6. download the PDB file labeled as "CHARMM PDB", (tdp_43_charmm.pdb in examples)
+7. to make sure the PDB file are in a correct format, please fix the potential problems using **pdbfix_res.py**
+   **Usage:** python pdbfix_res.py input_file output_file 0/1
+   **Note:** for the last parameter, 1 is for ACE/CT3 terminus, otherwise 0.
+   **For example:** python tdp_43_charmm.pdb tdp_43_fix.pdb 1
