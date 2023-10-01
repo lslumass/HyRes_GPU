@@ -1,5 +1,6 @@
 """
 Simple example script demonstrating how to use the PeptideBuilder library.
+Usage: python peptide_build.py seq_file
 """
 import sys
 from PeptideBuilder import Geometry
