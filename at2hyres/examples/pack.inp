@@ -1,0 +1,8 @@
+tolerance 10.0
+filetype pdb
+output 100.pdb
+
+structure tdp_43_hyres.pdb
+  number 100 
+  inside cube 0. 0. 0. 1500.
+end structure
