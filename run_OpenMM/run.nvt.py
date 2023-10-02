@@ -18,7 +18,7 @@ temperture = 300*unit.kelvin                                             # tempe
 log_freq = 1000                                                 # frequency of log file
 dcd_freq = 5000                                                 # frequency of fine dcd file
 c_ion = 0.15                                                     # concentration of ions
-lx = 40.0*unit.nanometer                                          # pbc box length
+lx = 40.0*unit.nanometer                                          # pbc box length for cubic box
 a = Vec3(lx, 0.0, 0.0)
 b = Vec3(0.0, lx, 0.0)
 c = Vec3(0.0, 0.0, lx)
@@ -28,10 +28,10 @@ eps_hb = 2.0*unit.kilocalorie_per_mole                          # hydrogen bond 
 sigma_hb = 0.29*unit.nanometer                                  # sigma of hydrogen bond
 r_cut = 1.8*unit.nanometer                                      # cutoff distance of nonbondedforce
 pressure = 1*unit.atmosphere                                    # pressure in NPT
-friction = 0.1/unit.picosecond                                    # friction coefficient in Langevin
+friction = 0.1/unit.picosecond                                  # friction coefficient in Langevin
 freq = 25  
 
-# 1) import coordinates and topology form charmm pdb and psf
+# 1) import coordinates and topology from charmm pdb and psf
 print('load coordinates, topology and parameters')
 pdb = PDBFile(pdb_file)
 
