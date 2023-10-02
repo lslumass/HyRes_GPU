@@ -40,4 +40,6 @@ Use psfgen_hyres.py to generate psf of hyres model. Here, 'top_hyres_gpu.in' is 
 Following the above instructions, one can obtain the pdb and psf files for a single protein/peptide. But sometimes, the simulation consists of multi-copies of one protein (like LLPS simulation) or several different proteins (like protein complex or binding of folded protein and IDP). In these two cases, additional steps are required.   
 ## Case 1: multi-copies of one protein (for example, the LLPS simulation)   
 Again, take the TDP-43-LCD as an example. Following the previous steps, we have the pdb and psf files for HyRes model of TDP-43-LCD, which are tdp_43_hyres.pdb and tdp_43_hyres.psf.   
-1. To create the pdb files containing 100 copies of tdp_43_hyres.pdb, lots of tools can be used. Here, we use [packmol](https://m3g.github.io/packmol/) to pack 100 proteins together, named as 100.pdb. Both the pdb file and packmol input file (pack.inp) can be found in examples.   
+1. To create the pdb files containing 100 copies of tdp_43_hyres.pdb, lots of tools can be used. Here, we use [packmol](https://m3g.github.io/packmol/) to pack 100 proteins together, named as 100.pdb. Both the pdb file and packmol input file (pack.inp) can be found in the examples.
+   **Note:** It's better to do a single-chain simulation to obtain the equilibrium chain of protein, which is used as the input of packmol.
+2.  
