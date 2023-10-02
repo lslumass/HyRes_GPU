@@ -48,4 +48,10 @@ Again, take the TDP-43-LCD as an example. Following the previous steps, we have 
 
 Now, we can run the simulation using 100.pdb and 100.psf as the input files.
 
-
+## Case 2: mixture of different proteins   
+For example, we are simulating a complex containing proteins A, B, C, and D (named as PA, PB, PC, and PD).    
+1. Follow the previous steps to obtain the HyRes pdb of the complex (complex.pdb) and each component (PA.pdb, PB.pdb, PC.pdb, and PD.pdb).    
+2. use **psfgen_hyres_combine.py** to generate the integrated psf for the complex.    
+   **Usage:** `python psfgen_hyres_combine.py output_psf_file a_series_of_pdb_file_for_each_component`    
+   **For example:** `python psfgen_hyres_combine.py complex.psf PA.pdb PB.pdb PC.pdb PD.pdb`    
+   **Note:** Up to ten components are supported, but one can easily chain the number in the script.    
