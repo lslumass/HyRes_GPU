@@ -32,7 +32,7 @@ HyRes was developed based CHARMM force field and software, so first a CHARMM-sty
 
 ## step 3: create psf file  
 Use psfgen_hyres.py to generate psf of hyres model. Here, 'top_hyres_gpu.in' is needed.   
-**Usage:** `python psfgen_hyres.py input_pbd_file outout_psf_file`  
+**Usage:** `python psfgen_hyres.py input_pbd_file output_psf_file`  
 **for example:** `python psfge_hyres.py tdp_43_hyres.pdb tdp_43_hyres.psf`
 
 
@@ -45,6 +45,7 @@ Again, take the TDP-43-LCD as an example. Following the previous steps, we have 
 2. Use **make_psf_multichains.py** to create an integrated psf file for the 100 proteins.   
    **Usage:** `python make_psf_multichains.py single_chain_psf_file chain_number segname`, the name of output file is {chain_number}.psf   
    **For example:** `python make_psf_multichains.py tdp_43_hyres.psf 100 A`, we will get a psf file named 100.psf.   
+
 Now, we can run the simulation using 100.pdb and 100.psf as the input files.
 
 
