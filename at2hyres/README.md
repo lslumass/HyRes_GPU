@@ -14,10 +14,11 @@ HyRes was developed based CHARMM force field and software, so first a CHARMM-sty
 3. here, input the PDB id or upload the PDB file, and then NEXT>NEXT>  
    **Note:** for IDPs/IDRs, one can generate the PDB file using the PeptideBuilder package.
    TDP-43-LCD is included in the folder of examples as a simple example. Typing the following command:   
-   `python peptide_build.py tdp-43-lcd.seq`   
-   one can get the PDB file of TDP-43-LCD named tdp-43.pdb
+   `python peptide_build.py tdp-43-lcd.seq tdp_43.pdb`   
+   one can get the PDB file of TDP-43-LCD named tdp-43.pdb. Sometimes you will find the C-terminal in the pdb obtained in the next steps has a wired position of C=O, you should check the pdb file and change the last "O" to "OXT"
+   
 4. here, one can choose any chains needed and also model missing residues if needed, NEXT>
-5. select ACE and CT3 in the "Terminal group patching" as the two terminus, NEXT>
+5. select ACE and CT3 in the "Terminal group patching" as the two termini, NEXT>
    **Note:** only ACE/CT3 are supported now in HyRes
 6. download the PDB file labeled as "CHARMM PDB", (tdp_43_charmm.pdb in examples)
 
