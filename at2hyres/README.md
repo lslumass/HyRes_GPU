@@ -23,8 +23,8 @@ HyRes was developed based CHARMM force field and software, so first a CHARMM-sty
 4. here, one can choose any chains needed and also model missing residues if needed, NEXT>
 5. in this step, one can choose the type of terminal groups ("Terminal group patching").    
    >[!NOTE]   
-   >For normal terminals, select NONE and NONE; for ACE/CT3 terminals, select ACE and CT3, NEXT>
-   only normal N/C-terminal or ACE/CT3 are supported now in HyRes
+   >For normal terminals, select NONE and NONE; for ACE/CT3 terminals, select ACE and CT3, NEXT>   
+   Only normal N/C-terminal or ACE/CT3 are supported now in HyRes
 6. download the PDB file labeled as "CHARMM PDB", (tdp_43_charmm.pdb in examples)
 
 ## step 2: convert atomistic pdb to HyRes pdb  
