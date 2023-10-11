@@ -17,7 +17,7 @@ HyRes was developed based CHARMM force field and software, so first a CHARMM-sty
    TDP-43-LCD is included in the folder of examples as a simple example. Typing the following command:   
    `python peptide_build.py tdp-43-lcd.seq tdp_43.pdb`   
    one can get the PDB file of TDP-43-LCD named tdp-43.pdb.   
-   >[!WARNNING]
+   >[!WARNING]
    >Sometimes after adding ACE/CT3 in the next steps, you will find the C-terminal in the pdb file has an unreasonable position of C=O, you should check this pdb file and change the last "O" to "OXT", which can be recognized by CHARMM-GUI in the next steps. But if no terminal group is patched in the next steps, nothing needs to be done.   
 4. here, one can choose any chains needed and also model missing residues if needed, NEXT>
 5. in this step, one can choose the type of terminal groups ("Terminal group patching"). For normal terminals, select NONE and NONE; for ACE/CT3 terminals, select ACE and CT3, NEXT>
