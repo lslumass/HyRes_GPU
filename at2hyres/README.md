@@ -39,6 +39,7 @@ HyRes was developed based CHARMM force field and software, so first a CHARMM-sty
 ## step 3: create psf file  
 Use psfgen_hyres.py to generate psf of hyres model. Here, 'top_hyres_GPU.inp' is needed.   
 **Usage:** `python psfgen_hyres.py input_pbd_file output_psf_file terminal_type`     
+>[!USAGE]   
 For terminal_type, input 'charged' for charged normal terminus, otherwise leave it blank  
 **for example:** `python psfge_hyres.py tdp_43_hyres.pdb tdp_43_hyres.psf`
 
