@@ -12,7 +12,8 @@ HyRes was developed based CHARMM force field and software, so first a CHARMM-sty
 1. open CHARMM-GUI and sign in.
 2. select Input Generator --> PDB Reader&Manipulator
 3. here, input the PDB id or upload the PDB file, and then NEXT>NEXT>  
-   [!NOTE] for IDPs/IDRs, one can generate the PDB file using the PeptideBuilder package.
+   >[!NOTE]
+   >for IDPs/IDRs, one can generate the PDB file using the PeptideBuilder package.
    TDP-43-LCD is included in the folder of examples as a simple example. Typing the following command:   
    `python peptide_build.py tdp-43-lcd.seq tdp_43.pdb`   
    one can get the PDB file of TDP-43-LCD named tdp-43.pdb. Sometimes after adding ACE/CT3 in the next steps, you will find the C-terminal in the pdb file has an unreasonable position of C=O, you should check this pdb file and change the last "O" to "OXT", which can be recognized by CHARMM-GUI in the next steps. But if no terminal group is patched in the next steps, nothing needs to be done.   
