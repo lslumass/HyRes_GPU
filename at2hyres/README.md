@@ -17,8 +17,8 @@ HyRes was developed based CHARMM force field and software, so first a CHARMM-sty
    `python peptide_build.py tdp-43-lcd.seq tdp_43.pdb`   
    one can get the PDB file of TDP-43-LCD named tdp-43.pdb. Sometimes after adding ACE/CT3 in the next steps, you will find the C-terminal in the pdb file has an unreasonable position of C=O, you should check this pdb file and change the last "O" to "OXT", which can be recognized by CHARMM-GUI in the next steps. But if no terminal group is patched in the next steps, nothing needs to be done.   
 4. here, one can choose any chains needed and also model missing residues if needed, NEXT>
-5. select ACE and CT3 in the "Terminal group patching" as the two termini, NEXT>
-   **Note:** only ACE/CT3 are supported now in HyRes
+5. in this step, one can choose the type of terminal groups ("Terminal group patching"). For normal terminals, select NONE and NONE; for ACE/CT3 terminals, select ACE and CT3, NEXT>
+   **Note:** only normal N/C-terminal or ACE/CT3 are supported now in HyRes
 6. download the PDB file labeled as "CHARMM PDB", (tdp_43_charmm.pdb in examples)
 
 ## step 2: convert atomistic pdb to HyRes pdb  
@@ -31,8 +31,8 @@ HyRes was developed based CHARMM force field and software, so first a CHARMM-sty
    **For example:** `python at2hyres_v2.py tdp_43_fix.pdb tdp_43_hyres.pdb`  
 
 ## step 3: create psf file  
-Use psfgen_hyres.py to generate psf of hyres model. Here, 'top_hyres_gpu.in' is needed.   
-**Usage:** `python psfgen_hyres.py input_pbd_file output_psf_file`  
+Use psfgen_hyres.py to generate psf of hyres model. Here, 'top_hyres_GPU.inp' is needed.   
+**Usage:** `python psfgen_hyres.py input_pbd_file output_psf_file terminal_type`, for terminal_type, input 'charged' for normal terminus, otherwise leave it blank  
 **for example:** `python psfge_hyres.py tdp_43_hyres.pdb tdp_43_hyres.psf`
 
 
