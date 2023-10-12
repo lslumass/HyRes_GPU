@@ -1,4 +1,7 @@
-# HyRes_GPU model tutorial
+# HyRes_GPU model tutorial   
+**at2hyres:** convert atomistic model to HyRes model   
+**run_OpenMM:** setup and script for running simulation on OpenMM   
+**backmap:** rebuild atomistic model from HyRes results   
 
 ## Shortly
 HyRes model is a **Hy**brid **Res**olution coarse-grained protein model developed since 2017, where the backbone is atomistic-style description but coarse-grained side chains. For a full and complete description of the HyRes model, please move to the related papers as follows:  
