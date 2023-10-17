@@ -114,7 +114,7 @@ def maprule(resname):
 
 # output in pdb-format
 def printcg(atom):
-    f2.write("%4s  %5d %4s %3s %1s%4d    %8.3f%8.3f%8.3f%6.2f%6.2f       %4s\n" % (atom[0],int(atom[1]),atom[2],atom[3][:3],atom[4], int(atom[5]),float(atom[6]),float(atom[7]),float(atom[8]),float(atom[9]),float(atom[10]), atom[11]))
+    f2.write("%4s  %5d %2s   %3s %1s%4d    %8.3f%8.3f%8.3f%6.2f%6.2f      %4s\n" % (atom[0],int(atom[1]),atom[2],atom[3][:3],atom[4], int(atom[5]),float(atom[6]),float(atom[7]),float(atom[8]),float(atom[9]),float(atom[10]), atom[11]))
 
 # convert at to cg
 bbcg1=['CA', 'N', 'HN']
