@@ -1,23 +1,12 @@
-TITLE      SER
-REMARK   1 File created by GaussView 6.0.16
-HETATM    1  N           0       1.525   0.493  -0.608                       N
-HETATM    2  C           0       0.100   0.469  -0.252                       C
-HETATM    3  C           0      -0.053   0.004   1.173                       C
-HETATM    4  O           0       0.751  -0.760   1.649                       O
-HETATM    5  C           0      -0.642  -0.489  -1.184                       C
-HETATM    6  O           0      -0.496  -0.049  -2.535                       O
-HETATM    7  H           0      -0.316   1.471  -0.354                       H
-HETATM    8  H           0      -0.225  -1.491  -1.081                       H
-HETATM    9  H           0      -1.699  -0.507  -0.920                       H
-HETATM   10  H           0      -0.978  -0.679  -3.088                       H
+CRYST1    0.000    0.000    0.000  90.00  90.00  90.00 P 1           1
+ATOM      1  N   SER X   1       1.525   0.493  -0.608  1.00  0.00           N
+ATOM      2 CA   SER X   1       0.100   0.469  -0.252  1.00  0.00           C
+ATOM      3  C   SER X   1      -0.053   0.004   1.173  1.00  0.00           C
+ATOM      4  O   SER X   1       0.751  -0.760   1.649  1.00  0.00           O
+ATOM      5 CB   SER X   1      -0.642  -0.489  -1.184  1.00  0.00           C
+ATOM      6 O1   SER X   1      -0.496  -0.049  -2.535  1.00  0.00           O
+ATOM      7 HA   SER X   1      -0.316   1.471  -0.354  1.00  0.00           H
+ATOM      8 HB   SER X   1      -0.225  -1.491  -1.081  1.00  0.00           H
+ATOM      9 HB   SER X   1      -1.699  -0.507  -0.920  1.00  0.00           H
+ATOM     10 HO   SER X   1      -0.978  -0.679  -3.088  1.00  0.00           H
 END
-CONECT    1    2
-CONECT    2    1    3    5    7
-CONECT    3    2    4
-CONECT    4    3
-CONECT    5    2    6    8    9
-CONECT    6    5   10
-CONECT    7    2
-CONECT    8    5
-CONECT    9    5
-CONECT   10    6

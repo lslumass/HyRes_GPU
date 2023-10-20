@@ -1,33 +1,16 @@
-TITLE      GLU
-REMARK   1 File created by GaussView 6.0.16
-HETATM    1  N           0       1.199   1.867  -0.117                       N
-HETATM    2  C           0       1.138   0.515   0.453                       C
-HETATM    3  C           0       2.364  -0.260   0.041                       C
-HETATM    4  O           0       3.010   0.096  -0.916                       O
-HETATM    5  C           0      -0.113  -0.200  -0.062                       C
-HETATM    6  C           0      -1.360   0.517   0.461                       C
-HETATM    7  C           0      -2.593  -0.187  -0.046                       C
-HETATM    8  O           0      -2.485  -1.161  -0.753                       O
-HETATM    9  O           0      -3.811   0.269   0.287                       O
-HETATM   10  H           0       1.098   0.580   1.540                       H
-HETATM   11  H           0      -0.117  -0.187  -1.152                       H
-HETATM   12  H           0      -0.113  -1.231   0.289                       H
-HETATM   13  H           0      -1.357   0.504   1.551                       H
-HETATM   14  H           0      -1.360   1.548   0.109                       H
-HETATM   15  H           0      -4.571  -0.215  -0.062                       H
+CRYST1    0.000    0.000    0.000  90.00  90.00  90.00 P 1           1
+ATOM      1  N   GLU X   1       1.199   1.867  -0.117  1.00  0.00           N
+ATOM      2 CA   GLU X   1       1.138   0.515   0.453  1.00  0.00           C
+ATOM      3  C   GLU X   1       2.364  -0.260   0.041  1.00  0.00           C
+ATOM      4  O   GLU X   1       3.010   0.096  -0.916  1.00  0.00           O
+ATOM      5 CB   GLU X   1      -0.113  -0.200  -0.062  1.00  0.00           C
+ATOM      6 CC   GLU X   1      -1.360   0.517   0.461  1.00  0.00           C
+ATOM      7 CD   GLU X   1      -2.593  -0.187  -0.046  1.00  0.00           C
+ATOM      8 O1   GLU X   1      -2.485  -1.161  -0.753  1.00  0.00           O
+ATOM      9 O2   GLU X   1      -3.811   0.269   0.287  1.00  0.00           O
+ATOM     10 HA   GLU X   1       1.098   0.580   1.540  1.00  0.00           H
+ATOM     11 HB   GLU X   1      -0.117  -0.187  -1.152  1.00  0.00           H
+ATOM     12 HB   GLU X   1      -0.113  -1.231   0.289  1.00  0.00           H
+ATOM     13 HC   GLU X   1      -1.357   0.504   1.551  1.00  0.00           H
+ATOM     14 HC   GLU X   1      -1.360   1.548   0.109  1.00  0.00           H
 END
-CONECT    1    2
-CONECT    2    1    3    5   10
-CONECT    3    2    4
-CONECT    4    3
-CONECT    5    2    6   11   12
-CONECT    6    5    7   13   14
-CONECT    7    6    8    9
-CONECT    8    7
-CONECT    9    7   15
-CONECT   10    2
-CONECT   11    5
-CONECT   12    5
-CONECT   13    6
-CONECT   14    6
-CONECT   15    9
