@@ -42,15 +42,15 @@ params = CharmmParameterSet(top_inp, param_inp)
 system = psf.createSystem(params, nonbondedMethod=CutoffPeriodic, constraints=HBonds)
 system.setDefaultPeriodicBoxVectors(a, b, c)
 
-# 2) constructe the force field
-print('constructe the Hyres2 force field')
+# 2) construct the force field
+print('construct the Hyres2 force field')
 # get nonbonded force
 for force in system.getForces():
     if force.getName() == "NonbondedForce":
         nbforce = force
 print('get the NonBondedForce:', nbforce.getName())
 
-# add custiom nonbondedforce: CNBForce
+# add custom nonbondedforce: CNBForce
 formula = '(step(Ron - r) + '+ \
 '(step(r - Ron) * step(Roff - r) - '+ \
 'step(r - Ron) * step(Ron - r)) * '+ \
