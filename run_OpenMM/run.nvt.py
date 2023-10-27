@@ -14,7 +14,7 @@ param_inp = 'param_hyres_GPU.inp'
 
 dt = 0.004*unit.picoseconds		                                # time step
 total_step = 500000000                                             # total step
-temperture = 300*unit.kelvin                                             # temperature
+temperature = 300*unit.kelvin                                             # temperature
 log_freq = 1000                                                 # frequency of log file
 dcd_freq = 5000                                                 # frequency of fine dcd file
 c_ion = 0.15                                                     # concentration of ions
@@ -152,13 +152,13 @@ system.removeForce(nbforce.getForceGroup())
 
 # prepare simulation
 print('prepare simulation system with NVT:')
-integrator = LangevinMiddleIntegrator(temperture, friction, dt)
+integrator = LangevinMiddleIntegrator(temperature, friction, dt)
 #integrator = VerletIntegrator(0.0005)
 plat = Platform.getPlatformByName('CUDA')
 prop = {'Precision': 'mixed', 'DeviceIndex': gpu_id}
 simulation = Simulation(top, system, integrator, plat, prop)
 simulation.context.setPositions(pdb.positions)
-simulation.context.setVelocitiesToTemperature(temperture)
+simulation.context.setVelocitiesToTemperature(temperature)
 simulation.minimizeEnergy()
 
 simulation.reporters.append(PDBReporter('system.pdb', total_step))
