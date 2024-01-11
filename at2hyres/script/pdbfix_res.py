@@ -7,6 +7,7 @@ import sys, os
 ## 4) set Occupancy (55-60) as 1.00 and set Temperature factor (61-66) as 0.00
 
 ## Author: Shanlong Li @ UMass
+## Latest: Jan 11, 2024
 
 pdb_file = sys.argv[1]  
 out_file = sys.argv[2]
@@ -23,31 +24,31 @@ for line in lines:
         new = line[:21] + 'X' + line[22:]
         atoms.append(new)
 
-if capping == '1':
-    ## get the length of each chain and number of residue of each chain
-    segname = atoms[0].split()[-1]
-    chains = []
-    ress = []
-    count = 0
-    resnum = 1
-    resid = int(atoms[0][22:26])
-    for atom in atoms:
-        if atom.split()[-1] == segname:
-            count += 1
-            if int(atom[22:26]) != resid:
-                resnum += 1
-                resid = int(atom[22:26])
-        else:
-            chains.append(count)
-            ress.append(resnum)
-            segname = atom.split()[-1]
-            count = 1
-            resnum = 1
+## get the length of each chain and number of residue of each chain
+segname = atoms[0].split()[-1]
+chains = []
+ress = []
+count = 0
+resnum = 1
+resid = int(atoms[0][22:26])
+for atom in atoms:
+    if atom.split()[-1] == segname:
+        count += 1
+        if int(atom[22:26]) != resid:
+            resnum += 1
             resid = int(atom[22:26])
-    chains.append(count)
-    ress.append(resnum)
-    print(chains, ress)
+    else:
+        chains.append(count)
+        ress.append(resnum)
+        segname = atom.split()[-1]
+        count = 1
+        resnum = 1
+        resid = int(atom[22:26])
+chains.append(count)
+ress.append(resnum)
+#print(chains, ress)
 
+if capping == '1':
     ## re-number the resid of N-T/C-T
     count = 0
     for i in range(len(chains)):
@@ -63,6 +64,16 @@ if capping == '1':
         count += chains[i]
 else:
     print('no cap')
+    ## re-name the Oxygen of C=O to "O"
+    count = 0
+    for i in range(len(chains)):
+        first_atom = count
+        last_atom = count + chains[i] - 1
+        for j in range(last_atom, first_atom, -1):
+            if str(atoms[j][12:16]) == ' C  ':
+                atoms[j+1] = atoms[j+1][:12] + ' O  ' + atoms[j+1][16:]
+                break
+        count += chains[i]
 
 n_res = 1
 resid = int(atoms[0][22:26])
