@@ -162,7 +162,7 @@ for ires in range(1,nres+1,1):   # loop over all residues
                printcg(ct)
            elif data[ires][j][2] in bbcg1:
               inx=inx+1
-              if data[ires][j][2] == 'HN':
+              if data[ires][j][2] in ['HN', 'HT1']:
                  data[ires][j][2]='H'
               data[ires][j][1]=inx
               data[ires][j][3]=data[ires][j][3]+'_'
