@@ -170,7 +170,7 @@ print('# Energy minimization:')
 simulation.minimizeEnergy()
 
 simulation.reporters.append(PDBReporter('system.pdb', total_step, enforcePeriodicBox=False))
-simulation.reporters.append(DCDReporter('system.dcd', dcd_freq*10))
+simulation.reporters.append(DCDReporter('system.dcd', dcd_freq))
 simulation.reporters.append(StateDataReporter('system.log', log_freq, step=True, time=True, progress=True, totalSteps=total_step, temperature=True, totalEnergy=True))
 #simulation.reporters.append(StateDataReporter(stdout, 1000, step=True, progress=True, remainingTime=True, speed=True, totalSteps=total_step))
 
