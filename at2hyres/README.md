@@ -7,6 +7,7 @@ In this section, following the instructions, you will see how to convert an atom
 3. psfgen-python (install through conda install -c conda-forge psfgen, python < 3.10)
 4. [PeptideBuilder](https://github.com/clauswilke/PeptideBuilder) and Biopython (Optional)
 
+# Simply starting from single-chain protein   
 ## step 1: prepare the atomistic PDB file  
 HyRes was developed based CHARMM force field and software, so first a CHARMM-style PDB file is needed. Here CHARMM-GUI is a good choice.
 1. open CHARMM-GUI and sign in.
