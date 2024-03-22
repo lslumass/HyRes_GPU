@@ -162,7 +162,7 @@ simulation.context.setVelocitiesToTemperature(temperature)
 simulation.minimizeEnergy()
 
 simulation.reporters.append(PDBReporter('system.pdb', total_step))
-simulation.reporters.append(DCDReporter('system.dcd', dcd_freq*10))
+simulation.reporters.append(DCDReporter('system.dcd', dcd_freq))
 #simulation.reporters.append(DCDReporter('system_fine.dcd', dcd_freq))
 simulation.reporters.append(StateDataReporter('system.log', log_freq, step=True, time=True, progress=True, totalSteps=total_step, temperature=True))
 #simulation.reporters.append(StateDataReporter(stdout, 1000, step=True, progress=True, remainingTime=True, speed=True, totalSteps=total_step))
