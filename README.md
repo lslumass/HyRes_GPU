@@ -3,6 +3,11 @@
 **run_OpenMM:** setup and script for running simulation on OpenMM   
 **backmap:** rebuild atomistic model from HyRes results   
 
+
+## Well-tested enviorement:  
+OpenMM 8.0+, python 3.8/3.9
+
+
 ## Shortly
 HyRes model is a **Hy**brid **Res**olution coarse-grained protein model developed since 2017, where the backbone is atomistic-style description but coarse-grained side chains. For a full and complete description of the HyRes model, please move to the related papers as follows:  
 1. HyRes: [Phys. Chem. Chem. Phys., 2017,19, 32421-32432](https://doi.org/10.1039/C7CP06736D)
