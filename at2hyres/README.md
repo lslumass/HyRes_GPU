@@ -30,8 +30,7 @@ HyRes was developed based CHARMM force field and software, so first a CHARMM-sty
 ## step 2: convert atomistic pdb to HyRes pdb  
 1. to make sure the PDB file are in the correct format, please fix the potential problems using **pdbfix_res.py**  
    **Usage:** `python pdbfix_res.py input_file output_file 0/1`  
-   **Note:** for the last parameter, 1 is for ACE/CT3 terminus, otherwise 0.  
-              And, the chainid will be changed to "X"  
+   **Note:** for the last parameter, 1 is for ACE/CT3 terminus, otherwise 0. And, the chainid will be changed to "X".  
    **For example:** `python pdbfix_res.py tdp_43_charmm.pdb tdp_43_fix.pdb 1`  
 3. use at2hyres_v2.py to convert the atomistic model to HyRes model  
    **Usage:** `python at2hyres_v2.py atomistic_pdb hyres_pdb`  
