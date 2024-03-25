@@ -16,6 +16,6 @@ num = len(sys.argv)
 for i in range(2, num):
     if sys.argv[i] != '':
         segid = 'P'+str(i-1)
-        gen.add_segment(segid=segid, pdbfile=sys.argv[i], auto_angles=False, auto_dihedrals=False)
+        gen.add_segment(segid=segid, pdbfile=sys.argv[i])
 
 gen.write_psf(filename=out)
