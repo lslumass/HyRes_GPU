@@ -13,7 +13,7 @@ elif len(sys.argv) == 3:
 
 gen = PsfGen()
 gen.read_topology('top_hyres_GPU.inp')
-gen.add_segment(segid='A', pdbfile=inp, auto_angles=False, auto_dihedrals=False)
+gen.add_segment(segid='A', pdbfile=inp)
 gen.write_psf(filename=out)
 
 if ter == 'charged':
