@@ -5,7 +5,7 @@ HyRes model is a **Hy**brid **Res**olution coarse-grained protein model develope
 3. HyRes-GPU: [J. Am. Chem. Soc. 2024, 146, 1, 342–357](https://doi.org/10.1021/jacs.3c09195)  
 
 This is a tutorial for running Hyres simulations. The tutorial contains the following:
-1. IDP (intrinsically disordered protein) system: prepare PDB and PSF for a single IDP or IDPs (liquid-liquid phase separation);
+1. IDP (intrinsically disordered protein) system: prepare PDB and PSF for a single IDP or IDPs (LLPS, liquid-liquid phase separation);
 2. Folded protein system: prepare PDB and PSF for single-domain proteins and protein complexes.
 
 Below is a short description of all folders in this tutorial:
@@ -88,8 +88,8 @@ python psfgen_hyres.py -i chainA.pdb chainB.pdb -n 20 30 -o llps.psf -ter charge
 
 
 ## Run simulation    
-Here, we prepared a well-test python script which incorpates the HyRes force field using OpenMM. 
-**description of the input script**
+Here, we prepared well-tested python scripts which incorpate the HyRes force field using OpenMM. 
+
 1. run.nvt.py is for the NVT simulation  
 2. run.npt.py is for the NPT simulation
 
