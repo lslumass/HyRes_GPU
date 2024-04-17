@@ -15,7 +15,7 @@ gen = PsfGen()
 gen.read_topology('top_hyres_GPU.inp')
 gen.add_segment(segid='A', pdbfile=inp)
 if ter == "charged":
-    res_start, res_end = 1, len(gen.get_resids(segid))
+    res_start, res_end = gen.get_resids(segid)[0], gen.get_resids(segid)[-1]
     gen.set_charge(segid, res_start, "N", 1.00)
     gen.set_charge(segid, res_end, "O", -1.00)
 gen.write_psf(filename=out)
