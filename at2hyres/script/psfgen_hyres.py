@@ -6,10 +6,7 @@ from psfgen import PsfGen
 
 inp = sys.argv[1]
 out = sys.argv[2]
-if len(sys.argv) == 4:
-    ter = sys.argv[3]
-elif len(sys.argv) == 3:
-    ter = 'neutral'
+ter = sys.argv[3] if len(sys.argv) > 3 else 'neutral'
 
 gen = PsfGen()
 gen.read_topology('top_hyres_GPU.inp')
