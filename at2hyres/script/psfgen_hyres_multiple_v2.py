@@ -1,12 +1,12 @@
 import sys
 from psfgen import PsfGen
 
-## usage: python psfgen_hyres.py input_file output_file terminal_type(Neutral/charged/ACE_CT3)
+## usage: python psfgen_hyres.py output_psf input_psf chain_number terminal_type(Neutral/charged/ACE_CT3)
 ## for terminal_type, input 'charged' for normal terminus, otherwise leave it blank
 
-pdb = sys.argv[1]
-num = int(sys.argv[2])
-out = sys.argv[3]
+out = sys.argv[1]
+pdb = sys.argv[2]
+num = int(sys.argv[3])
 if len(sys.argv) == 5:
     ter = sys.argv[4]
 elif len(sys.argv) == 4:
