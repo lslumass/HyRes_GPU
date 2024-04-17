@@ -7,7 +7,7 @@ from psfgen import PsfGen
 ## Usage: python *.py psf_output_filename pdb_input_filename chain_number
 
 out = sys.argv[1]
-pdb = int(sys.argv[2])
+pdb = sys.argv[2]
 num = int(sys.argv[3])
 
 gen = PsfGen()
