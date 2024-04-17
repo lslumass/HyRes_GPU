@@ -50,9 +50,10 @@ Following the instructions above, one can obtain the pdb and psf files for a sin
 Again, take the TDP-43-LCD as an example. Following the previous steps, we have the pdb and psf files for HyRes model of TDP-43-LCD, which are tdp_43_hyres.pdb and tdp_43_hyres.psf.   
 1. To create the pdb files containing 100 copies of tdp_43_hyres.pdb, lots of tools can be used. Here, we use [packmol](https://m3g.github.io/packmol/) to pack 100 proteins together, named as 100.pdb. Both the pdb file and packmol input file (pack.inp) can be found in the examples.   
    **Note:** It's better to do a single-chain simulation to obtain the equilibrium chain of protein, which is used as the input of packmol.   
-2. Use **psfgen_hyres_multiple.py** to create an integrated psf file for the 100 proteins.   
-   **Usage:** `python psfgen_hyres_multiple.py output_psf_filename input_pdb_filename chain_number`     
-   **For example:** `python psfgen_hyres_multiple.py 100.psf tdp_43_hyres.pdb 100`, we will get a psf file named 100.psf.   
+2. Use **psfgen_hyres_multiple_v2.py** to create an integrated psf file for the 100 proteins.   
+   **Usage:** `python psfgen_hyres_multiple_v2.py output_psf_filename input_pdb_filename chain_number`     
+   **For example:** `python psfgen_hyres_multiple_v2.py 100.psf tdp_43_hyres.pdb 100`, we will get a psf file named 100.psf.
+   **Note:** Again, for terminal_type, input 'charged' for charged normal terminus, otherwise leave it blank
 
 Now, we can run the simulation using 100.pdb and 100.psf as the input files.
 
