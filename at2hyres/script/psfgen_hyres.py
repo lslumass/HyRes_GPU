@@ -14,16 +14,10 @@ elif len(sys.argv) == 3:
 gen = PsfGen()
 gen.read_topology('top_hyres_GPU.inp')
 gen.add_segment(segid='A', pdbfile=inp)
+if ter == "charged":
+    res_start, res_end = 1, len(gen.get_resids(segid))
+    gen.set_charge(segid, res_start, "N", 1.00)
+    gen.set_charge(segid, res_end, "O", -1.00)
 gen.write_psf(filename=out)
-
-if ter == 'charged':
-    ## modify the terminus, add charge to N (+1) and O (-1)
-    with open(out, 'r') as psf:
-        line = psf.readlines()
-        num = int(line[7].split()[0])
-        line[8] = line[8][:36] + '1.000000' + line[8][44:]
-        line[num+7] = line[num+7][:35] + '-1.000000' + line[num+7][44:]
-        with open(out, 'w') as f:
-            f.writelines(line)
 
 exit()
