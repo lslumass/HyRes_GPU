@@ -52,7 +52,7 @@ Again, take the TDP-43-LCD as an example. Following the previous steps, we have 
    **Note:** It's better to do a single-chain simulation to obtain the equilibrium chain of protein, which is used as the input of packmol.   
 2. Use **psfgen_hyres_multiple_v2.py** to create an integrated psf file for the 100 proteins.   
    **Usage:** `python psfgen_hyres_multiple_v2.py output_psf_filename input_pdb_filename chain_number`     
-   **For example:** `python psfgen_hyres_multiple_v2.py 100.psf tdp_43_hyres.pdb 100`, we will get a psf file named 100.psf.
+   **For example:** `python psfgen_hyres_multiple_v2.py 100.psf tdp_43_hyres.pdb 100`, we will get a psf file named 100.psf.   
    **Note:** Again, for terminal_type, input 'charged' for charged normal terminus, otherwise leave it blank
 
 Now, we can run the simulation using 100.pdb and 100.psf as the input files.
