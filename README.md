@@ -44,7 +44,7 @@ For IDPs or simple peptides without folded structures, please using [HyresBuilde
 ### Folded protein system
 This is for the cases where you already have an all-atom PDB file, usually describing a folded protein or a multi-domain/chain protein. All hydrogens are not necessary but no need to remove them if your have them.
 
-To convert atomistic model to HyRes model, please follow [README.md](https://github.com/wayuer19/HyRes_GPU/blob/main/at2hyres/README.md) in [at2hyres](https://github.com/wayuer19/HyRes_GPU/tree/main/at2hyres) for the step-by-step instructions.  
+To convert atomistic model to HyRes model, please follow [README.md](at2hyres/README.md) in [at2hyres](at2hyres) for the step-by-step instructions.  
 
 ## Prepare Hyres PSF
 
@@ -95,7 +95,7 @@ Here, we prepared well-tested python scripts which incorpate the HyRes force fie
 
 Some parameters needed to be modified according to users' specific needs, such as box size, time step, ion concentration, and so on   
 
-After these two steps, HyRes simulation can be run through:
+HyRes simulation can be run through:
 ```
 python run.nvt.py pdb_file psf_file GPU_id
 python run.npt.py pdb_file psf_file GPU_id
