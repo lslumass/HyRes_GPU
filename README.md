@@ -20,7 +20,7 @@ Below is a short description of all folders in this tutorial:
 
 **generate_psf**: generate PSF for IDP and folded proteins
 
-**backmap:** rebuild atomistic model from HyRes results (only for developers)
+**backmap:** rebuild atomistic model from HyRes results (for developers)
 
 
 ## Build environment  
