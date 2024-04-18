@@ -25,16 +25,14 @@ Below is a short description of all folders in this tutorial:
 
 ## Build environment  
 well-tested in: OpenMM 8.0+, python 3.8/3.9
-```
-# build a new conda environment
-conda create -n hyres python=3.8
-
-# install openmm 8.0+
-# reference: http://docs.openmm.org/latest/userguide/application/01_getting_started.html#installing-openmm
-
-# dependencies: listing all installation commands for all package
-# such as psfgen, biopython 
-```
+1. build a new conda environment   
+conda create -n hyres python=3.8   
+2. install openmm 8.0+   
+reference: [OpenMM Installation](http://docs.openmm.org/latest/userguide/application/01_getting_started.html#installing-openmm)   
+3. dependencies:  
+a. [CHARMM-GUI](https://www.charmm-gui.org/) (registration required)   
+b. [psfgen-python](https://psfgen.robinbetz.com/) (install through "conda install -c conda-forge psfgen", python < 3.10)   
+c. [PeptideBuilder](https://github.com/clauswilke/PeptideBuilder) and Biopython (Optional)
 
 ## Prepare Hyres PDB
 
