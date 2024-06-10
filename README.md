@@ -57,7 +57,7 @@ generate PSF for Hyres systems
 
 optional arguments:
   -h, --help            Show this help message and exit
-  -i INPUT_PDB_FILES    Hyres PDB file(s) (default: None)
+  -i INPUT_PDB_FILES    Hyres PDB file(s) of mononer (default: None)
   -o OUTPUT_PSF_FILE    Output name/path for Hyres PSF (default: output.psf)
   -n NUM_OF_CHAINS      Number of copies for each pdb (default: [1,])
   -t {neutral,charged}  Terminal charged status (default: neutral)

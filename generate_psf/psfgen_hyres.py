@@ -11,7 +11,7 @@ hyres_topology_input = os.path.join(project_dir, "hyres_forcefield", "top_hyres_
 def main():
     parser = argparse.ArgumentParser(description="generate PSF for Hyres systems",
                                  formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("-i", "--input_pdb_files", help="Hyres PDB file(s)", required=True, nargs="+")
+    parser.add_argument("-i", "--input_pdb_files", help="Hyres PDB file(s), it should be the pbd of monomer", required=True, nargs="+")
     parser.add_argument("-o", "--output_psf_file", help="output name/path for Hyres PSF", required=True, default="output.psf")
     parser.add_argument("-n", "--num_of_chains", help="Number of copies for each pdb; it should have the same length as the given pdb list specified in the '-i' argument", default=[1,], nargs="+")
     parser.add_argument("-t", "--ter", choices=['neutral', 'charged'], help="Terminal charged status (choose from ['neutral', 'charged'])", default='neutral')
