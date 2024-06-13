@@ -194,13 +194,13 @@ NH1   C1E   A3K   QdK     0.50    1     75.0   ! lys
 NH1   C1E   A3R   QdR     0.30    3     0.0    ! arg
 NH1   C1E   A3R   QdR     0.50    1     75.0   ! arg
 NH1   C1E   A4H   P1H     0.60    3     0.0    ! his
-NH1   C1E   A4H   P1H     0.40    1     75.0   ! his
+!NH1   C1E   A4H   P1H     0.40    1     75.0   ! his
 NH1   C1E   A4H   P1H     0.10    1     50.0   ! his
 NH1   C1E   A1F   A2F     0.80    3     180.0  ! phe
-NH1   C1E   A1F   A2F     0.30    1     100.0  ! phe
+!NH1   C1E   A1F   A2F     0.30    1     100.0  ! phe
 NH1   C1E   A1F   A2F     0.10    1     50.0   ! phe
 NH1   C1E   A1Y   A2Y     0.90    3     180.0  ! tyr
-NH1   C1E   A1Y   A2Y     0.30    1     90.0   ! tyr
+!NH1   C1E   A1Y   A2Y     0.30    1     90.0   ! tyr
 NH1   C1E   A1Y   A2Y     0.10    1     50.0   ! tyr
 NH1   C1E   A1W   P1W     0.80    3     0.0    ! trp
 NH1   C1E   A1W   P1W     0.80    1     85.0   ! trp
