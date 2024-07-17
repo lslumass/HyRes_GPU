@@ -135,7 +135,7 @@ Hforce.addGlobalParameter('CTOFHA', 91*unit.degree)
 Hforce.addGlobalParameter('CTONHA', 90*unit.degree)
 Hforce.addGlobalParameter('sigma', sigma_hb)
 Hforce.addGlobalParameter('epsilon', eps_hb)
-Hforce.setCutoffDistance(r_cut)
+Hforce.setCutoffDistance(0.6*unit.nanometer)
 
 Ns, Hs, Os, Cs = [], [], [], []
 for atom in psf.topology.atoms():
