@@ -1,6 +1,10 @@
 tolerance 10.0
 filetype pdb
 output 100.pdb
+seed 1234567
+randominitialpoint 
+sidemax 1500.d0
+add_box_sides 0.0
 
 structure tdp_43_hyres.pdb
   number 100 
