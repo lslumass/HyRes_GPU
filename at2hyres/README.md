@@ -29,5 +29,5 @@ HyRes was developed based CHARMM force field and software, so first a CHARMM-sty
    **Usage:** `python at2hyres.py atomistic_pdb hyres_pdb`  
    **For example:** `python at2hyres.py tdp_43_fix.pdb tdp_43_hyres.pdb`  
 
-**Next step is to create psf file following the main [tutorial](./README.md)**   
+**Next step is to create psf file following the main [tutorial](../README.md).**   
 
