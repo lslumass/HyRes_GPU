@@ -14,8 +14,9 @@ optional arguments:
   -o OUTPUT_PSF_FILE    Output name/path for Hyres PSF (default: output.psf)
   -n NUM_OF_CHAINS      Number of copies for each pdb (default: [1,])
   -t {neutral,charged}  Terminal charged status (default: neutral)
-
 ```
+
+**Here are some examples:**   
 1. generate PSF for a single-chain protein
 ```
 python psfgen_hyres.py -i protein.pdb -o protein.psf
