@@ -4,9 +4,7 @@ import argparse
 import os
 
 # Global varibale
-script_dir = os.path.dirname(os.path.abspath(__file__))
-project_dir = os.path.dirname(script_dir)
-hyres_topology_input = os.path.join(project_dir, "hyres_forcefield", "top_hyres_GPU.inp")
+hyres_topology = "./top_hyres_GPU.inp"
 
 def main():
     parser = argparse.ArgumentParser(description="generate PSF for Hyres systems",
@@ -24,7 +22,7 @@ def main():
     ter = args.ter
 
     gen = PsfGen()
-    gen.read_topology(hyres_topology_input)
+    gen.read_topology(hyres_topology)
 
 
     if len(pdb_list) == 1:  # copies of singe chain 
