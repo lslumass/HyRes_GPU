@@ -32,8 +32,7 @@ reference: [OpenMM Installation](http://docs.openmm.org/latest/userguide/applica
 3. dependencies:  
 a. [CHARMM-GUI](https://www.charmm-gui.org/) (registration required)   
 b. [psfgen-python](https://psfgen.robinbetz.com/) (install through "conda install -c conda-forge psfgen", python < 3.10)   
-c. [PeptideBuilder](https://github.com/clauswilke/PeptideBuilder) and Biopython (Optional)
-d. mdtraj (>=1.9.9)
+c. [HyresBuilder](https://github.com/wayuer19/HyresBuilder)   
 
 ## Prepare Hyres PDB
 
