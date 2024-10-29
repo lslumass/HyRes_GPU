@@ -69,7 +69,7 @@ python run.npt.py pdb_file psf_file GPU_id
 ```  
 
 ****
-run.py is the simplified script for running simulation, but [HyresBuilder] is needed.  
+run.py is the simplified script for running simulation, but [HyresBuilder](https://github.com/wayuer19/HyresBuilder) is needed.  
    **Usage**:
    ```
    python run.py -h
