@@ -68,3 +68,21 @@ python run.nvt.py pdb_file psf_file GPU_id
 python run.npt.py pdb_file psf_file GPU_id
 ```  
 
+****
+run.py is the simplified script for running simulation, but [HyresBuilder] is needed.  
+   **Usage**:
+   ```
+   python run.py -h
+
+   usage: run.py [-h] [-c PDB] [-p PSF] [-t TEMP] [-b BOX [BOX ...]] [-s SALT]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c PDB, --pdb PDB     pdb file
+  -p PSF, --psf PSF     psf file
+  -t TEMP, --temp TEMP  system temperature
+  -b BOX [BOX ...], --box BOX [BOX ...]
+                        box dimensions in nanometer, e.g., '50 50 50'
+  -s SALT, --salt SALT  salt concentration in mM
+   ```
+the default values are ```-c conf.pdb -p conf.psf -t 303 -s 150```   
