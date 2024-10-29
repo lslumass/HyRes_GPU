@@ -45,6 +45,10 @@ This is for the cases where you already have an all-atom PDB file, usually descr
 
 To convert atomistic model to HyRes model, please follow [README.md](at2hyres/README.md) in [at2hyres](at2hyres) for the step-by-step instructions.  
 
+
+### LLPS system   
+In the simulation of phase separation, there usually has several copies of protein. In this case, use [packmol](https://m3g.github.io/packmol/) or any other softwares to pack these copies into one box. And use monomer pdb file to create the psf file of the whole system ([details here](./generate_psf/README.md)). 
+
 ## Prepare Hyres PSF
 
 We created a `psfgen_hyres.py` in the **generate_psf** folder to generate Hyres PSF for all kinds of scenarios.  
