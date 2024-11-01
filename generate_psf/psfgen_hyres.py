@@ -4,7 +4,7 @@ import argparse
 import os
 
 # Global varibale
-hyres_topology = "./top_hyres_GPU.inp"
+hyres_topology = "../hyres_forcefield/top_hyres_GPU.inp"
 
 def main():
     parser = argparse.ArgumentParser(description="generate PSF for Hyres systems",
