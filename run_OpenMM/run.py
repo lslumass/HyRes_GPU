@@ -1,6 +1,8 @@
 from __future__ import division, print_function
 import argparse
+import importlib.resources as pkg_resources
 from HyresBuilder import HyresFF
+from HyresBuilder import forcefield as ff
 # OpenMM Imports
 from openmm.unit import *
 from openmm.app import *
@@ -9,22 +11,27 @@ import numpy as np
 
 # 0) set variables in the simulation
 gpu_id = "0"
-top_inp = './hyres_forcefield/param_hyres_GPU.inp'
-param_inp = './hyres_forcefield/top_hyres_GPU.inp'
+top_inp = pkg_resources.path(ff, 'top_hyres_GPU.inp')
+param_inp = pkg_resources.path(ff, 'param_hyres_GPU.inp')
 
 # input parameters
 parser = argparse.ArgumentParser()
-parser.add_argument('-c', "--pdb", default='conf.pdb', help="pdb file")
-parser.add_argument('-p', "--psf", default='conf.psf', help="psf file")
-parser.add_argument('-t', "--temp", default=303, type=float, help="system temperature")
+parser.add_argument('-c', "--pdb", default='conf.pdb', help="pdb file, default is conf.pdb")
+parser.add_argument('-p', "--psf", default='conf.psf', help="psf file, default is conf.psf")
+parser.add_argument('-t', "--temp", default=303, type=float, help="system temperature, default is 303 K")
 parser.add_argument('-b', "--box", nargs='+', type=float, help="box dimensions in nanometer, e.g., '50 50 50' ")
-parser.add_argument('-s', "--salt", default=150.0, type=float, help="salt concentration in mM")
+parser.add_argument('-s', "--salt", default=150.0, type=float, help="salt concentration in mM, default is 150 mM")
+parser.add_argument('-e', "--ens", default='NVT', type=str, help="simulation ensemble, NPT or NVT")
 
 args = parser.parse_args()
 pdb_file = args.pdb
 psf_file = args.psf
 T = args.temp
 c_ion = args.salt/1000.0                                   # concentration of ions in M
+ensemble = args.ens
+if ensemble not in ['NPT', 'NVT']:
+    print("Error: The ensemble must be NPT or NVT. The input value is {}.".format(ensemble))
+    exit(1)
 # pbc box length
 if len(args.box) == 1:
     lx, ly, lz = args.box[0], args.box[0], args.box[0]
@@ -81,14 +88,18 @@ for force in system.getForces():
     print('      ', force.getName())
 
 # simulation
-print('\n################### prepare simulation system with NVT ####################')
+if ensemble == 'NPT':
+    print('\n################### prepare simulation system with NPT ####################')
+    system.addForce(MonteCarloBarostat(pressure, temperture, 25))
+elif ensemble == 'NVT':
+    print('\n################### prepare simulation system with NVT ####################')
 integrator = LangevinMiddleIntegrator(temperture, friction, dt)
 plat = Platform.getPlatformByName('CUDA')
 prop = {'Precision': 'mixed', 'DeviceIndex': gpu_id}
 simulation = Simulation(top, system, integrator, plat, prop)
 simulation.context.setPositions(pdb.positions)
 simulation.context.setVelocitiesToTemperature(temperture)
-print('Langevin, CUDA, {temperature} K')
+print('Langevin, CUDA, {}'.format(temperture))
 
 print('\n################### Minimization, Equilibriation, Production simulation ####################')
 print('# minimizeEnergy:')
