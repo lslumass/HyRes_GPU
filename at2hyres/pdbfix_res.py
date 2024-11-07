@@ -50,6 +50,7 @@ ress.append(resnum)
 
 if capping == '1':
     ## re-number the resid of N-T/C-T
+    print('ACE/CT3 terminus')
     count = 0
     for i in range(len(chains)):
         nt_start, ct_start = count, count + chains[i] - 6

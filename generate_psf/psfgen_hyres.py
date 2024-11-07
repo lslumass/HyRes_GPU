@@ -24,6 +24,10 @@ def main():
     gen = PsfGen()
     gen.read_topology(hyres_topology)
 
+    # Set up an alias for histidine protonation states
+    gen.alias_residue(top_resname="HIS", pdb_resname="HIE")
+    gen.alias_residue(top_resname="HIS", pdb_resname="HID")
+    gen.alias_residue(top_resname="HIS", pdb_resname="HSD")
 
     if len(pdb_list) == 1:  # copies of singe chain 
         pdb = pdb_list[0]
