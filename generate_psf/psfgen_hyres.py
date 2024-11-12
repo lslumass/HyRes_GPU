@@ -1,10 +1,12 @@
 import sys
 from psfgen import PsfGen
+from HyresBuilder import utils
 import argparse
 import os
 
 # Global varibale
-hyres_topology = "../hyres_forcefield/top_hyres_GPU.inp"
+top_inp, param_inp = utils.load_ff('protein')
+hyres_topology = top_inp
 
 def main():
     parser = argparse.ArgumentParser(description="generate PSF for Hyres systems",
