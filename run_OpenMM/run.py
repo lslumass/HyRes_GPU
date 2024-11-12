@@ -11,7 +11,7 @@ import numpy as np
 
 # 0) set variables in the simulation
 gpu_id = "0"
-top_inp, param_inp = utils.load_ff(['protein'])
+top_inp, param_inp = utils.load_ff('protein')
 
 # input parameters
 parser = argparse.ArgumentParser()
