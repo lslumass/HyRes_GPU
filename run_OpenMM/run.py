@@ -84,7 +84,7 @@ else:
     psf.setBox(lx, ly, lz)
     system.setDefaultPeriodicBoxVectors(a, b, c)
 
-system = HyresFF.HyresProteinSystem(psf, system, ffs)
+system = HyresFF.HyresSystem(psf, system, ffs)
 
 with open('system.xml', 'w') as output:
     output.write(XmlSerializer.serialize(system))
