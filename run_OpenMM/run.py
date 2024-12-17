@@ -82,6 +82,7 @@ if ensemble == 'non':
 else:
     psf.setBox(lx, ly, lz)
     top.setPeriodicBoxVectors((a, b, c))
+    top.setUnitCellDimensions((lx, ly,lz))
     system = psf.createSystem(params, nonbondedMethod=CutoffPeriodic, constraints=HBonds)
     system.setDefaultPeriodicBoxVectors(a, b, c)
 
