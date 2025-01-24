@@ -123,8 +123,8 @@ simulation.step(equil_step)
 
 ## save a pdb traj using large step, dcd traj using small step, and log file
 simulation.reporters.append(PDBReporter('system.pdb', pdb_freq))
-simulation.reporters.append(DCDReporter('system.dcd', dcd_freq))
-simulation.reporters.append(StateDataReporter('system.log', log_freq, progress=True, remainingTime=True, speed=True, totalSteps=total_step, temperature=True))
+simulation.reporters.append(XTCReporter('system.xtc', dcd_freq))
+simulation.reporters.append(StateDataReporter('system.log', log_freq, temperature=True, potentialEnergy=True, kineticEnergy=True, totalEnergy=True))
 #simulation.reporters.append(CheckpointReporter('system.chk', dcd_freq*10))
 
 simulation.integrator.setStepSize(0.004*unit.picoseconds)
