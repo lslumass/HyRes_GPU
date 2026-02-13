@@ -1,12 +1,11 @@
 import sys
 from psfgen import PsfGen
-from HyresBuilder import utils
 import argparse
-import os
+
 
 # Global varibale
-top_inp, param_inp = utils.load_ff('protein')
-hyres_topology = top_inp
+top_inp = 'top_hyres_GPU.inp'
+param_inp = 'param_hyres_GPU.inp'
 
 def main():
     parser = argparse.ArgumentParser(description="generate PSF for Hyres systems",
@@ -24,7 +23,7 @@ def main():
     ter = args.ter
 
     gen = PsfGen()
-    gen.read_topology(hyres_topology)
+    gen.read_topology(top_inp)
 
     # Set up an alias for histidine protonation states
     gen.alias_residue(top_resname="HIS", pdb_resname="HIE")
