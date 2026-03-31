@@ -1,4 +1,6 @@
 # HyRes_GPU model tutorial 
+**Note:** HyRes model has been further optimized. It will be released soon. If interested, contact shanlongli@umass.edu   
+
 HyRes model is a **Hy**brid **Res**olution coarse-grained protein model developed since 2017, where the backbone is atomistic-style description but coarse-grained side chains. For a full and complete description of the HyRes model, please move to the related papers as follows:  
 1. HyRes: [Phys. Chem. Chem. Phys., 2017,19, 32421-32432](https://doi.org/10.1039/C7CP06736D)
 2. HyRes-II: [J. Chem. Inf. Model. 2022, 62, 18, 4523–4536](https://doi.org/10.1021/acs.jcim.2c00974)
@@ -68,7 +70,7 @@ python run.npt.py pdb_file psf_file GPU_id
 ```  
 
 ****
-run.py is the simplified script for running simulation, but [HyresBuilder](https://github.com/wayuer19/HyresBuilder) is needed.  
+run.py is the simplified script for running simulation.  
    **Usage**:
    ```
    python run.py -h
